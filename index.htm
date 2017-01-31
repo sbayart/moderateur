@@ -16,8 +16,7 @@
     function moderate() {
         var text = document.getElementById("textarea").value;
         var result = document.getElementById("resultat");
-        text = text.replace(RegExp(":)", "--"));
-        text = text.replace(":D", "--");
+        text = text.replace(/:D|:O|:v\)|:\(/g, "--");
         result.innerHTML = text;
     }
     </script>
