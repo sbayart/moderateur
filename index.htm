@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>titre de page</title>
+        <link href="./css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <textarea id="textarea" name="name" rows="8" cols="80"></textarea>
+        <button type="button" name="button" onclick="moderate()">Modérer</button>
+        <div id="resultat">
+
+        </div>
+    </body>
+    <script>
+    function moderate() {
+        var text = document.getElementById("textarea").value;
+        var result = document.getElementById("resultat");
+        text = text.replace(RegExp(":)", "--"));
+        text = text.replace(":D", "--");
+        result.innerHTML = text;
+    }
+    </script>
+</html>
